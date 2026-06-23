@@ -256,9 +256,9 @@ export default function Hero() {
         }
 
         .hero-portrait {
-          width: min(520px, 70vh);
+          width: min(480px, 48vh);
           height: auto;
-          max-height: 65vh;
+          aspect-ratio: 3 / 4;
           object-fit: cover;
           border-radius: 0;
           box-shadow: none;
@@ -341,8 +341,9 @@ export default function Hero() {
         /* Responsive */
         @media (max-width: 768px) {
           .hero-portrait {
-            width: min(300px, 55vh);
-            max-height: 55vh;
+            width: min(300px, 40vh);
+            aspect-ratio: 3 / 4;
+            max-height: none;
           }
 
           .floating-nav {
