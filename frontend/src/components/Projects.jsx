@@ -165,8 +165,8 @@ export default function Projects() {
     <section id="projects" className="projects-section section">
       <div className="container">
         <div className="section-header">
-          <h2>Featured Projects & Live Demos</h2>
-          <p>Explore production-ready architectures and click "View Live Demo" to interact with simulated pipelines.</p>
+          <h2>Featured Projects</h2>
+          
         </div>
 
         {/* Filter Tabs */}
@@ -212,13 +212,8 @@ export default function Projects() {
                   </div>
                   
                   <h3 className="project-card-title">{p.title}</h3>
-                  <p className="project-card-description">{p.description}</p>
 
                   <div className="project-actions">
-                    <button onClick={() => handleOpenDemo(p.title)} className="btn btn-secondary btn-sm btn-glow">
-                      <Play size={14} />
-                      <span>View Live Demo</span>
-                    </button>
                     <a href={p.github_url} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-sm">
                       <Github size={14} />
                       <span>Code</span>

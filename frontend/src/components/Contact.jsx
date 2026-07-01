@@ -117,107 +117,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
-          {/* Interactive Form Panel */}
-          <div className="contact-form-panel glass-panel">
-            <h3>Send a Message</h3>
-            
-            {status === 'success' ? (
-              <div className="form-success-box animated fadeIn">
-                <CheckCircle2 size={48} className="success-icon-large" />
-                <h4>Thank You!</h4>
-                <p>Your message has been submitted successfully. I will get back to you shortly.</p>
-                <button onClick={() => setStatus('idle')} className="btn btn-secondary btn-sm">
-                  Send Another Message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="contact-form">
-                {status === 'error' && (
-                  <div className="form-error-box animated fadeIn">
-                    <AlertCircle size={20} />
-                    <span>{errorMsg}</span>
-                  </div>
-                )}
-
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="name" className="form-label">Full Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="form-input"
-                      placeholder="Indrajeet Kumbhar"
-                      required
-                      disabled={status === 'submitting'}
-                    />
-                  </div>
-
-                  <div className="form-group">
-                    <label htmlFor="email" className="form-label">Email Address</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="form-input"
-                      placeholder="your-email@gmail.com"
-                      required
-                      disabled={status === 'submitting'}
-                    />
-                  </div>
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="subject" className="form-label">Subject</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="form-input"
-                    placeholder="Project Collaboration / Job Opening"
-                    required
-                    disabled={status === 'submitting'}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="message" className="form-label">Your Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="form-textarea"
-                    placeholder="Describe your project, timeline, or job opportunities..."
-                    required
-                    disabled={status === 'submitting'}
-                  ></textarea>
-                </div>
-
-                <button 
-                  type="submit" 
-                  className="btn btn-primary submit-btn" 
-                  disabled={status === 'submitting'}
-                >
-                  {status === 'submitting' ? (
-                    <span>Submitting...</span>
-                  ) : (
-                    <>
-                      <span>Send Message</span>
-                      <Send size={18} />
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
-          </div>
         </div>
       </div>
 
@@ -227,10 +126,10 @@ export default function Contact() {
         }
 
         .contact-grid {
-          display: grid;
-          grid-template-columns: 0.9fr 1.1fr;
-          gap: 40px;
+          display: flex;
+          justify-content: center;
           align-items: start;
+          gap: 40px;
         }
 
         .contact-info-panel, .contact-form-panel {
