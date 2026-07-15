@@ -16,7 +16,7 @@ export async function fetchProjects() {
         title: "Enterprise Document Intelligence System",
         description: "An enterprise-grade AI system capable of processing invoices, resumes, contracts, and reports using OCR and Multi-Agent AI workflows. Solved automated manual document processing, reduced information extraction times, and improved overall document understanding.",
         image_url: "/images/document_intelligence.png",
-        github_url: "https://github.com/yourusername/document-intelligence",
+        github_url: "https://github.com/indra0855/indrajeet-portfolio",
         live_url: "#demo-document-intelligence",
         tech_stack: "Python,FastAPI,LangGraph,LangChain,OCR,PostgreSQL,Ollama,RAG,Docker"
       },
@@ -25,7 +25,7 @@ export async function fetchProjects() {
         title: "AI-Powered Skin Cancer Detection",
         description: "A deep learning computer vision application that identifies skin cancer lesions and classifies their types (e.g. Melanoma, Basal Cell Carcinoma) with high accuracy using MobileNetV2. Includes preventive recommendations.",
         image_url: "/images/skin_cancer.png",
-        github_url: "https://github.com/yourusername/skin-cancer-detection",
+        github_url: "https://github.com/indra0855/indrajeet-portfolio",
         live_url: "#demo-skin-cancer",
         tech_stack: "Python,TensorFlow,OpenCV,Flask,Deep Learning"
       },
@@ -34,7 +34,7 @@ export async function fetchProjects() {
         title: "Global Food Production Analytics Dashboard",
         description: "An interactive analytical dashboard displaying global food production trends, crop yield distributions, country-level agricultural analyses, and trade flows.",
         image_url: "/images/food_analytics.png",
-        github_url: "https://github.com/yourusername/food-production-dashboard",
+        github_url: "https://github.com/indra0855/indrajeet-portfolio",
         live_url: "#demo-food-analytics",
         tech_stack: "Power BI,Python,SQL,Pandas,Plotly"
       }

@@ -18,6 +18,11 @@ def get_projects(db: Session = Depends(get_db)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to fetch projects: {str(e)}")
 
+@router.get("", response_model=List[ProjectResponse])
+def get_projects_root(db: Session = Depends(get_db)):
+    """Alias for get_projects to handle requests without trailing slash."""
+    return get_projects(db)
+
 @router.post("/", response_model=ProjectResponse)
 def create_project(project: ProjectCreate, db: Session = Depends(get_db)):
     try:
@@ -51,7 +56,7 @@ def seed_projects(db: Session):
                 title="Enterprise Document Intelligence System",
                 description="An enterprise-grade AI system capable of processing invoices, resumes, contracts, and reports using OCR and Multi-Agent AI workflows. Solved automated manual document processing, reduced information extraction times, and improved overall document understanding.",
                 image_url="/images/document_intelligence.png",
-                github_url="https://github.com/indra0855/Enterprise-Document-Intelligence-System-using-Multi-Agent-AI",
+                github_url="https://github.com/indra0855/indrajeet-portfolio",
                 live_url="#demo-document-intelligence",
                 tech_stack="Python,FastAPI,LangGraph,LangChain,OCR,PostgreSQL,Ollama,RAG,Docker"
             ),
@@ -59,7 +64,7 @@ def seed_projects(db: Session):
                 title="AI-Powered Skin Cancer Detection",
                 description="A deep learning computer vision application that identifies skin cancer lesions and classifies their types (e.g. Melanoma, Basal Cell Carcinoma) with high accuracy using MobileNetV2. Includes preventive recommendations.",
                 image_url="/images/skin_cancer.png",
-                github_url="https://github.com/indra0855/skin-cancer-detection",
+                github_url="https://github.com/indra0855/indrajeet-portfolio",
                 live_url="#demo-skin-cancer",
                 tech_stack="Python,TensorFlow,OpenCV,Flask,Deep Learning"
             ),
@@ -67,7 +72,7 @@ def seed_projects(db: Session):
                 title="Smart Garbage Detection System",
                 description="An AI-based waste management solution that uses Python, OpenCV, TensorFlow/PyTorch, CNN/YOLO, and Flask/FastAPI to automatically detect and classify different types of garbage from images or live video feeds. The system improves waste segregation, enhances recycling efficiency, and promotes cleaner environments through intelligent and automated waste monitoring.",
                 image_url="/images/garbage_detection.png",
-                github_url="https://github.com/indra0855/Smart-Garbage-Detection",
+                github_url="https://github.com/indra0855/indrajeet-portfolio",
                 live_url="#demo-garbage-detection",
                 tech_stack="Python,OpenCV,TensorFlow,PyTorch,CNN,YOLO,Flask,FastAPI"
             )
